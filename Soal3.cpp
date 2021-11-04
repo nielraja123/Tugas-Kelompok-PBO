@@ -61,7 +61,7 @@ class Pegawai {
         int a,b,c;
         a = (this->jamPulang[1]-this->jamMasuk[1]);
         c = (this->jamPulang[0]-this->jamMasuk[0]);
-        if (this->jamPulang[0] > 16 and this->jamPulang[1] > 0 and this->jamPulang[2] > 0) {
+        if (this->jamPulang[0] >= 16 && this->jamPulang[1] > 0 && this->jamPulang[2] > 0) {
             a = 0 - this->jamMasuk[1];
             b = 0 - this->jamMasuk[2];
             c = 16 - this->jamMasuk[0];
@@ -73,7 +73,7 @@ class Pegawai {
         if(b<=-1){
             b = b*-1;
         }
-        int second = (this->jamPulang[0]-this->jamMasuk[0])*3600 + (a)*60 + (this->jamPulang[2]-this->jamMasuk[2]);
+        int second = (c)*3600 + (a)*60 + (b);
         this->durasiKerja= (second%86400)/3600;
         if(this->durasiKerja > 8){
             this->durasiKerja = 8;
