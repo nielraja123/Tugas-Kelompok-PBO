@@ -1,20 +1,20 @@
 class Persegi:
     def __init__(self, panjang, lebar):
-        self.panjang = panjang
+        self.__panjang = panjang
         self.__lebar = lebar
 
-    def setPersegi(self,panjang,lebar):
-        self.panjang = panjang
+    def setPersegi(self, panjang, lebar):
+        self.__panjang = panjang
         self.__lebar = lebar
 
     def setPanjang(self,panjang):
-        self.panjang = panjang
+        self.__panjang = panjang
 
     def setLebar(self,lebar):
         self.__lebar = lebar
 
     def getPanjang(self):
-        return self.panjang
+        return self.__panjang
 
     def getLebar(self):
         return self.__lebar
@@ -23,18 +23,18 @@ class Persegi:
         panjang = input("Masukkan panjang persegi panjang (Cm) = ")
         lebar = input("Masukkan lebar persegi panjang  (Cm)  = ")
         print("")
-        self.panjang=float(panjang)
-        self.__lebar=float(lebar)
+        self.__panjang = float(panjang)
+        self.__lebar = float(lebar)
 
     def hitungKeliling(self):
-        return ((self.panjang * 2) + (self.__lebar * 2))
+        return ((self.__panjang * 2) + (self.__lebar * 2))
 
     def hitungLuas(self):
-        return (self.panjang * self.__lebar)
+        return (self.__panjang * self.__lebar)
 
     def cetakPersegiPanjang(self):
         print("Pencetakan di dalam class :")
-        print("Panjang persegi panjang  = ",self.panjang, "Cm")
+        print("Panjang persegi panjang  = ",self.__panjang, "Cm")
         print("Lebar persegi panjang    = ",self.__lebar, "Cm")
         print("Keliling persegi panjang = ",self.hitungKeliling(), "Cm")
         print("Luas persegi panjang     = ",self.hitungLuas(), "Cm Kuadrat\n")
@@ -47,7 +47,7 @@ keliling = myPersegiPjg1.hitungKeliling()
 luas = myPersegiPjg1.hitungLuas()
 
 print("Dari Luar class :")
-print("Panjang persegi panjang                 =", myPersegiPjg1.panjang, "Cm")
+print("Panjang persegi panjang                 =", myPersegiPjg1.getPanjang(), "Cm")
 print("Lebar persegi panjang                   =", myPersegiPjg1.getLebar(), "Cm")
 print("Keliling persegi panjang (diluar class) =", keliling, "Cm")
 print("Luas persegi panjang (diluar class)     =", luas, "Cm Kuadrat\n")

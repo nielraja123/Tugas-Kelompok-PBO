@@ -18,7 +18,8 @@ public:
         panjang = panjangPp;
         lebar = lebarPp;
     }
-    //Setter dan Getter
+    
+    //Setter
     void setPanjang(float panjangPp){ 
         panjang = panjangPp;
     }
@@ -32,10 +33,11 @@ public:
         lebar = lebarPp;
     }
 
+    //Getter
     float getPanjang(){
         return(panjang);
     }
-
+    
     float getLebar(){
         return (lebar);
     }
